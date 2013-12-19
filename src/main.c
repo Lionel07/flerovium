@@ -5,19 +5,18 @@ By Corwin McKnight
 */
 #include <stdio.h>
 #include <stdint.h>
-void sampleAppInstallation();
-
+#include "common.h"
 int main()
 {
-	sampleAppInstallation();
-	return 0;
-}
-
-void sampleAppInstallation()
-{
-	printf("Downloading sample...\n");
-	system("sudo wget --limit-rate=50 --progress=bar dl.dropboxusercontent.com/s/p858xvozhm3iw0p/sample.tar.gz -O /usr/local/flerovium/cache/sample.tar.gz");
-	printf("Extracting downloaded file...\n");
-	system("sudo mkdir /usr/local/flerovium/cache/sample/");
-	system("cd /usr/local/flerovium/cache/sample/ && sudo tar -zxvf /usr/local/flerovium/cache/sample.tar.gz");
+		int rargc = 0; //FIXME: Set to argc-1!
+		if(rargc==0)
+		{
+				printf("Flerovium Package Manager v. %s\n","0.0.0.1"); //TODO: Replace string with literal in common.h
+				printf("Valid options:\n");
+				printf("install\t Installs a package\n");
+				printf("remove\t Removes a package\n");
+				printf("update\t Updates package list\n");
+				printf("clean\t Cleans out the cache\n");
+		}
+		return 0;
 }

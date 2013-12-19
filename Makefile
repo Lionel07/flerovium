@@ -1,10 +1,9 @@
-SRC_CORE:="src/main.c"
 INSTALL_DIRECTORY="/usr/bin/"
 all: core
 
 core:
 	@echo "Building Flerovium"
-	@gcc -O2 ${SRC_CORE} -o fpm
+	@gcc -O2 src/main.c src/network.c src/package.c src/fs.c -o fpm
 install:
 	@echo "Installing into ${INSTALL_DIRECTORY}"
 	@sudo cp fpm ${INSTALL_DIRECTORY}
