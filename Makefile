@@ -3,7 +3,7 @@ all: core
 
 core:
 	@echo "Building Flerovium"
-	@gcc -O2 src/main.c src/network.c src/package.c src/fs.c -o fpm
+	@cc -O2 src/main.c src/network.c src/package.c src/fs.c src/md5.c -o fpm
 install:
 	@echo "Installing into ${INSTALL_DIRECTORY}"
 	@sudo cp fpm ${INSTALL_DIRECTORY}
