@@ -12,7 +12,8 @@ int check_package_dependencies(package_t pack)
 }
 int extract_package(char* archive_path,package_t pack)
 {
-	system("cd /usr/local/flerovium/cache/ && tar -zxf "+archive_path)
+	system("cd /usr/local/flerovium/cache/ && tar -zxf "); //FIXME: Add Package path.
+	//pack.isUnpacked=true;
 }
 void populate_package()
 {
