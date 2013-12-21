@@ -1,0 +1,5 @@
+Packaging
+================
+Packaging is normally a difficult job, but flerovium tries to make it simple by packaging the source.
+
+Flerovium attempts to identify the build system to build it on the fly. A Makefile must provide rules for install, remove, update, and clean. Currently only Makefiles are supported. And for all, it would be most pleasent if you left a message to the user informing them that they should not call the Makefile directly. all will never be called by Flerovium, so it's safe to leave a message after the beep.

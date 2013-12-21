@@ -1,0 +1,4 @@
+Install
+=============
+For installations, please just run "sudo make all install"
+To remove, just run "sudo make uninstall"
